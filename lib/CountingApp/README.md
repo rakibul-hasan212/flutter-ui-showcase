@@ -78,7 +78,7 @@ CountingApp/
 │── README.md
 ```
 
-> ⚠️ Structure may vary depending on your implementation
+> ⚠️ Structure may vary stay focused when you read 
 
 ---
 
