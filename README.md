@@ -97,7 +97,7 @@ lib/
 │   ├── custom_button.dart
 ```
 
-> ⚠️ Structure may vary (customize based on your actual files)
+> ⚠️ Structure may vary stay focused when you read
 
 ---
 
