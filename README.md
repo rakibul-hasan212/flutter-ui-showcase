@@ -150,7 +150,7 @@ flutter run
 ### 📊 Counting App(Simple Increment and Decrement and Clear button Perform)
 
 <p align="center">
-  <img src="assets/images/outputs/CountingApp/countingApp.png" width="200"/>
+  <img src="assets/images/outputs/CountingApp/countingApp.png" width="250"/>
 </p>
 
 ---
@@ -158,18 +158,10 @@ flutter run
 ### 💬 Contact Info (Apply the ListView)
 
 <p align="center">
-  <img src="assets/images/outputs/ContactInfo/contactInfoWithListView.png" width="200"/>
+  <img src="assets/images/outputs/ContactInfo/contactInfoWithListView.png" width="250"/>
 </p>
 
 ---
-
-| 💬 Contact Info
-  (Apply the ListView)                        | Design 1                       | Design 2                       |
-| --------------------------- | ------------------------------ | ------------------------------ |
-| ![](assets/images/home.png) | ![](assets/images/design1.png) | ![](assets/images/design2.png) |
-
----
-
 
 ## 🚀 Use Cases
 
