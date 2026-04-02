@@ -150,7 +150,15 @@ flutter run
 
 ### 📱 UI Design 2
 
-![LoginPage](assets/images/outputs/profileUI/LoginPageWithNavigation.png)
+<p align="center">
+  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
+  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
+  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
+</p>
 
 
 ---
@@ -232,6 +240,10 @@ If you like this project:
 > “Design is not just what it looks like — it's how it works.” 🎨
 
 Keep building beautiful UIs with Flutter 🚀
+
+
+
+
 
 
 
