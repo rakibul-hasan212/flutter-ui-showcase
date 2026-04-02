@@ -112,7 +112,7 @@ flutter run
 
 ## 📸 Screenshots
 
-> 📷 Screenshots are available in 
+> 📷 Screenshots available in `assets/images/outputs/ToDoApp`
 
 ---
 
