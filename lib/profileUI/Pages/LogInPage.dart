@@ -1,7 +1,8 @@
-import 'package:counting/LogIn_SignUp_WithNavigationPage/Pages/SignUpPage.dart';
+
 import 'package:flutter/material.dart';
 
 import 'HomePage.dart';
+import 'SignUpPage.dart';
 
 
 
@@ -18,7 +19,7 @@ class LogInPage extends StatelessWidget{
         scrollDirection: Axis.vertical,
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.only(top: 120.0,left: 10,right: 10),
             child: Container(
               width: double.maxFinite,
               child: Column(

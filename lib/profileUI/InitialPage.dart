@@ -1,5 +1,4 @@
-import 'package:counting/LogIn_SignUp_WithNavigationPage/Pages/HomePage.dart';
-import 'package:counting/LogIn_SignUp_WithNavigationPage/Pages/SignUpPage.dart';
+
 import 'package:flutter/material.dart';
 import 'Pages/LogInPage.dart';
 

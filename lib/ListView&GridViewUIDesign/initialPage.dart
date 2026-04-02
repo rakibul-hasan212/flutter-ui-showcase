@@ -73,10 +73,9 @@ class MainPage extends StatelessWidget {
                               Icon(
                                 Icons.calendar_month_rounded,
                                 color: Colors.white,
-                                size: 60,
+                                size: 40,
                               ),
-                              SizedBox(height: 10,),
-                              Text("Calendar",style: TextStyle(fontSize:25,color:Colors.white)),
+                              Text("Calendar",style: TextStyle(fontSize:24,color:Colors.white)),
                               SizedBox(height: 10,),
                               Text("March,Wednesday",style: TextStyle(fontSize:20,color:Colors.grey)),
                               SizedBox(height: 20,),
@@ -99,10 +98,10 @@ class MainPage extends StatelessWidget {
                               Icon(
                                 Icons.local_grocery_store,
                                 color: Colors.deepOrangeAccent,
-                                size: 60,
+                                size: 40,
                               ),
-                              SizedBox(height: 10,),
-                              Text("Groceries",style: TextStyle(fontSize:25,color:Colors.white)),
+
+                              Text("Groceries",style: TextStyle(fontSize:24,color:Colors.white)),
                               SizedBox(height: 10,),
                               Text("Bocali,Apple",style: TextStyle(fontSize:20,color:Colors.grey),),
                               SizedBox(height: 20,),
@@ -125,9 +124,9 @@ class MainPage extends StatelessWidget {
                               Icon(
                                 Icons.location_on_sharp,
                                 color: Colors.red,
-                                size: 60,
+                                size: 40,
                               ),
-                              SizedBox(height: 10,),
+
                               Text("Locations",style: TextStyle(fontSize:25,color:Colors.white)),
                               SizedBox(height: 10,),
                               Text("Going to office",style: TextStyle(fontSize:20,color:Colors.grey),),
@@ -151,9 +150,9 @@ class MainPage extends StatelessWidget {
                               Icon(
                                 Icons.local_activity_sharp,
                                 color: Colors.lightGreenAccent,
-                                size: 60,
+                                size: 40,
                               ),
-                              SizedBox(height: 10,),
+
                               Text("Activity",style: TextStyle(fontSize:25,color:Colors.white)),
                               SizedBox(height: 10,),
                               Text("Facebook Post",style: TextStyle(fontSize:20,color:Colors.grey),),
@@ -177,12 +176,12 @@ class MainPage extends StatelessWidget {
                               Icon(
                                 Icons.list_alt_outlined,
                                 color: Colors.green,
-                                size: 60,
+                                size: 40,
                               ),
-                              SizedBox(height: 10,),
+
                               Text("To Do",style: TextStyle(fontSize:25,color:Colors.white)),
                               SizedBox(height: 10,),
-                              Text("Homework, Design",style: TextStyle(fontSize:20,color:Colors.grey),),
+                              Text("Homework",style: TextStyle(fontSize:20,color:Colors.grey),),
                               SizedBox(height: 20,),
                               Text("4 Items",style: TextStyle(fontSize:20,color:Colors.grey[700])),
 
@@ -203,9 +202,9 @@ class MainPage extends StatelessWidget {
                               Icon(
                                 Icons.settings_rounded,
                                 color: Colors.grey[350],
-                                size: 60,
+                                size: 40,
                               ),
-                              SizedBox(height: 10,),
+
                               Text("Settings",style: TextStyle(fontSize:25,color:Colors.white)),
                               SizedBox(height: 10,),
                               Text(" ",style: TextStyle(fontSize:20,color:Colors.grey),),
@@ -216,7 +215,8 @@ class MainPage extends StatelessWidget {
                           ),
                         ),
                       )
-                  )
+                  ),
+
 
                 ],
               ),

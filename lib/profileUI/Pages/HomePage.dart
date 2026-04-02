@@ -1,6 +1,7 @@
-import 'package:counting/LogIn_SignUp_WithNavigationPage/Pages/AboutPage.dart';
+
 import 'package:flutter/material.dart';
 
+import 'AboutPage.dart';
 import 'HeroSectionPage.dart';
 import 'Projects.dart';
 import 'QuotesSectionPage.dart';
