@@ -124,9 +124,7 @@ flutter run
 
 ## 📸 Screenshots
 
-<p align="center">
-  <img src="assets/images/listview.png" width="250"/>
-</p>
+📷 Screenshots are available in `assets/images/outputs/ListView&GridViewLayout`
 
 ---
 
