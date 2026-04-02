@@ -90,7 +90,7 @@ lib/profileUI/
 │   ├── info_card.dart
 ```
 
-> ⚠️ Structure may vary (customize as needed)
+> ⚠️ Structure may vary 
 
 ---
 
@@ -122,12 +122,14 @@ flutter run
 
 ## 📸 Screenshots
 
-<p align="center">
-  <img src="assets/images/profile1.png" width="250"/>
-  <img src="assets/images/profile2.png" width="250"/>
-</p>
+### 👨‍💻 Profile UI Design with Navigator Page also works on Drawer
 
-> 📷 screenshots inside `assets/images/`
+<p align="center">
+  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="23%"/>
+  <img src="assets/images/outputs/profileUI/signupPageOutput.png" width="23%"/>
+  <img src="assets/images/outputs/profileUI/ProtfolioPage.png" width="23%"/>
+  <img src="assets/images/outputs/profileUI/DrawerOutputs.png" width="23%"/>
+</p>
 
 ---
 
