@@ -135,7 +135,7 @@ flutter run
 
 ---
 
-### 🎨 Profile UI Design with Navigator Page also works on Drawer
+### 👨‍💻 Profile UI Design with Navigator Page also works on Drawer
 
 <p align="center">
   <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="23%"/>
@@ -147,19 +147,19 @@ flutter run
 
 ---
 
-
-### 📱 UI Design 2
-
-<p align="center">
-  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
-  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
-</p>
+### 📊 Counting App(Simple Increment and Decrement and Clear button Perform)
 
 <p align="center">
-  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
-  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="45%"/>
+  <img src="assets/images/outputs/CountingApp/countingApp.png" width="200"/>
 </p>
 
+---
+
+### 💬 Contact Info (Apply the ListView)
+
+<p align="center">
+  <img src="assets/images/outputs/ContactInfo/contactInfoWithListView.png" width="200"/>
+</p>
 
 ---
 
