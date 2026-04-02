@@ -112,7 +112,7 @@ flutter run
 
 ## 📸 Screenshots
 
-> 📷 Add ToDo app screenshots here in later on
+> 📷 Screenshots are available in 
 
 ---
 
