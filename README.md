@@ -138,10 +138,10 @@ flutter run
 ### 🎨 Profile UI Design with Navigator Page also works on Drawer
 
 <p align="center">
-  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="250"/>
-  <img src="assets/images/outputs/profileUI/signupPageOutput.png" width="250"/>
-  <img src="assets/images/outputs/profileUI/ProtfolioPage.png" width="250"/>
-  <img src="assets/images/outputs/profileUI/DrawerOutputs.png" width="250"/>
+  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="23%"/>
+  <img src="assets/images/outputs/profileUI/signupPageOutput.png" width="23%"/>
+  <img src="assets/images/outputs/profileUI/ProtfolioPage.png" width="23%"/>
+  <img src="assets/images/outputs/profileUI/DrawerOutputs.png" width="23%"/>
 </p>
 
 
