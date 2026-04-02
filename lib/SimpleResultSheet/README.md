@@ -108,7 +108,7 @@ flutter run
 
 ## 📸 Screenshots
 
-> 📷 Add result UI screenshots here for better presentation in later
+> 📷 Screenshots are available in `assets/images/outputs/ResultSheet`
 
 ---
 
