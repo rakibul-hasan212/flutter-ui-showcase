@@ -108,9 +108,9 @@ flutter run
 
 ---
 
-## 📸 UI Preview
+## 📸 Screenshots
 
-> 📷 Add the screenshot of the project in Later
+> 📷 Screenshots are available in `assets/images/outputs/ContactInfo`
 
 ---
 
