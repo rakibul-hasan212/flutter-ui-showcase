@@ -163,6 +163,13 @@ flutter run
 
 ---
 
+| 💬 Contact Info
+  (Apply the ListView)                        | Design 1                       | Design 2                       |
+| --------------------------- | ------------------------------ | ------------------------------ |
+| ![](assets/images/home.png) | ![](assets/images/design1.png) | ![](assets/images/design2.png) |
+
+---
+
 
 ## 🚀 Use Cases
 
@@ -240,6 +247,7 @@ If you like this project:
 > “Design is not just what it looks like — it's how it works.” 🎨
 
 Keep building beautiful UIs with Flutter 🚀
+
 
 
 
