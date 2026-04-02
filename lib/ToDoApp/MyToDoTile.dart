@@ -40,7 +40,7 @@ class MyToDoTile extends StatelessWidget{
               ),
               const SizedBox(width:10,),
               ToDoMassage(
-                  text: todotext, size: 16, checker: value)
+                  text: todotext, size: 19, checker: value)
             ],
           ),
         ),
