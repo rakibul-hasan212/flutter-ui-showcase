@@ -110,7 +110,7 @@ flutter run
 
 ## 📸 Screenshots
 
-> 📷 Add the app UI screenshots here in Later
+> 📷 Screenshots are available in `assets/images/outputs/CountingApp`
 
 ---
 
