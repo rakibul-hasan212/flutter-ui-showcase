@@ -163,6 +163,12 @@ flutter run
 
 ---
 
+### 📱 Simple UI with ListView and GridView 
+
+![Home Screen](assets/images/outputs/ListView&GridViewLayout/ListView&GridViewOutputs.png)
+
+---
+
 ## 🚀 Use Cases
 
 * 📱 UI design practice
