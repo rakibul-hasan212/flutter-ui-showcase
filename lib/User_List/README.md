@@ -106,7 +106,7 @@ flutter run
 
 ## 📸 Screenshots
 
-> 📷 Screenshots available in `assets/images/outputs`
+> 📷 Screenshots available in `assets/images/outputs/userList`
 
 ---
 
