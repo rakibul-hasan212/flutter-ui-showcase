@@ -83,24 +83,6 @@ This project is mainly focused on **UI design**, not backend logic.
 
 ---
 
-## 📁 Project Structure
-
-```bash id="z8kx2d"
-lib/
-│── main.dart
-│── screens/
-│   ├── home_screen.dart
-│   ├── design_1.dart
-│   ├── design_2.dart
-│── widgets/
-│   ├── custom_card.dart
-│   ├── custom_button.dart
-```
-
-> ⚠️ Structure may vary 
-
----
-
 ## ⚙️ Getting Started
 
 ### 🔧 Prerequisites
