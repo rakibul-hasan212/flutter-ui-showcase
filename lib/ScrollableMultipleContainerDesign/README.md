@@ -129,7 +129,7 @@ flutter run
 
 ## 📸 Screenshots
 
-> 📷 Add UI screenshots here later
+> 📷 Screenshots are available in `assets/images/outputs/MultiContainer`
 
 ---
 
