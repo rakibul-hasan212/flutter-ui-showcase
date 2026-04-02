@@ -135,15 +135,23 @@ flutter run
 
 ---
 
-### 🎨 UI Design 1
+### 🎨 Profile UI Design with Navigator Page also works on Drawer
 
-![Design 1](assets/images/design1.png)
+<p align="center">
+  <img src="assets/images/outputs/profileUI/LoginPageWithNavigation.png" width="250"/>
+  <img src="assets/images/outputs/profileUI/signupPageOutput.png" width="250"/>
+  <img src="assets/images/outputs/profileUI/ProtfolioPage.png" width="250"/>
+  <img src="assets/images/outputs/profileUI/DrawerOutputs.png" width="250"/>
+</p>
+
 
 ---
 
+
 ### 📱 UI Design 2
 
-![Design 2](assets/images/design2.png)
+![LoginPage](assets/images/outputs/profileUI/LoginPageWithNavigation.png)
+
 
 ---
 
@@ -224,4 +232,7 @@ If you like this project:
 > “Design is not just what it looks like — it's how it works.” 🎨
 
 Keep building beautiful UIs with Flutter 🚀
+
+
+
 
