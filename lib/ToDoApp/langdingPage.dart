@@ -39,7 +39,7 @@ class _HomepageState extends State<Homepage> {
     [false,"Study about the Row Widget"],
     [false,"Study about the ListView Widget"],
     [false,"Study about the GridView Widget"],
-    [false,"Study about the SingleChildScrolView Widget"],
+    [false,"Study about the Stack Widget"],
     [false,"Study about the Padding Widget"],
     [false,"Study about the Center Widget"],
     [false,"Study about the Button Widget"],

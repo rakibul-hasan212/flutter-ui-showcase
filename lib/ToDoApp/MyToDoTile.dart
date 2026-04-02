@@ -38,7 +38,7 @@ class MyToDoTile extends StatelessWidget{
                 checkColor: Colors.white,
                 value: value, onChanged: onChanged
               ),
-              const SizedBox(width:10,),
+              //const SizedBox(width:10,),
               ToDoMassage(
                   text: todotext, size: 19, checker: value)
             ],
