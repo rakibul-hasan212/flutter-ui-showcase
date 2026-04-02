@@ -15,7 +15,7 @@ class MyText extends StatelessWidget {
 
   // TitleText
   factory MyText.titleText(String text,
-      {Color textcolor = Colors.black,
+      {Color textcolor = Colors.black87,
       double size = 28,
       FontWeight fontWeightValue = FontWeight.bold}) {
     return MyText(
