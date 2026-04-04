@@ -12,7 +12,7 @@ class ToDoMassage extends StatelessWidget{
         required this.text,
         required this.size,
         required this.checker,
-        this.textColor = Colors.black87
+        this.textColor = Colors.white
       }
       );
 

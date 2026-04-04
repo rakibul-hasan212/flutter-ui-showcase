@@ -36,15 +36,98 @@ class _HomepageState extends State<Homepage> {
   List toDoInfo = [
     [false,"Study about the Container Widget"],
     [false,"Study about the Column Widget"],
-    [false,"Study about the Row Widget"],
-    [false,"Study about the ListView Widget"],
-    [false,"Study about the GridView Widget"],
-    [false,"Study about the Stack Widget"],
-    [false,"Study about the Padding Widget"],
-    [false,"Study about the Center Widget"],
-    [false,"Study about the Button Widget"],
-    [false,"Study about the Form Widget"]
+    // [false,"Study about the Row Widget"],
+    // [false,"Study about the ListView Widget"],
+    // [false,"Study about the GridView Widget"],
+    // [false,"Study about the Stack Widget"],
+    // [false,"Study about the Padding Widget"],
+    // [false,"Study about the Center Widget"],
+    // [false,"Study about the Button Widget"],
+    // [false,"Study about the Form Widget"]
   ];
+  TextEditingController _Massage = TextEditingController();
+
+  DaitogBoxCreate(){
+    showDialog(context: context,
+        builder: (context){
+          return AlertDialog(
+            content: Container(
+              height: 150,
+              width: 200,
+              color: Colors.white,
+              child: Column(
+                children: [
+                  TextFormField(
+                    controller: _Massage,
+                    decoration: InputDecoration(
+                      hintText: "Enter your list message",
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          width: 2,
+                          color: Colors.black87
+                        ),
+                        borderRadius: BorderRadius.circular(14)
+                      )
+                    ),
+                  ),
+                  SizedBox(height: 30,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            toDoInfo.add([false , _Massage.text.toString()]);
+                            _Massage.clear();
+                            Navigator.pop(context);
+
+                          });
+
+
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            color: Colors.orangeAccent,
+                            borderRadius: BorderRadius.circular(14)
+                          ),
+                          child: Center(
+                              child: Text("Add",style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white),)),
+                        ),
+                      ),
+                      SizedBox(width: 20,),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.pop(context);
+                          // setState(() {
+                          //   Navigator.pop(context);
+                          //   //toDoInfo.add([_toDoMassage.text.toString()]);
+                          // });
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 80,
+                          decoration: BoxDecoration(
+                              color: Colors.orangeAccent,
+                              borderRadius: BorderRadius.circular(14)
+                          ),
+                          child: Center(
+                              child: Text("Cancel",style: TextStyle(fontSize:16,fontWeight: FontWeight.bold,color: Colors.white),)),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+
+
+            ),
+
+          );
+        }
+        );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +150,15 @@ class _HomepageState extends State<Homepage> {
                     },
                   todotext: toDoInfo[index][1]
                 );
-              })
+              }),
+          floatingActionButton: FloatingActionButton(
+              onPressed: (){
+                DaitogBoxCreate();
+                //Navigator.pop(context);
+              },
+              child: Icon(Icons.add,size: 40,),
+                  
+          ),
     )
     );
   }
