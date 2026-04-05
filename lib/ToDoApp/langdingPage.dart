@@ -81,7 +81,7 @@ class _HomepageState extends State<Homepage> {
                       onChanged(index);
                     },
                   todotext: toDoInfo[index][1],
-                  onDeleteMassage: onDeleteMassage(index)
+                  onDeleteMassage: () => onDeleteMassage(index)
                 );
               }),
           floatingActionButton: FloatingActionButton(

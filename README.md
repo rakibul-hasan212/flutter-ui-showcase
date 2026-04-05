@@ -126,7 +126,11 @@ flutter run
 
 ### 📱 ToDo App 
 
-![Home Screen](assets/images/outputs/ToDoApp/todoApp.png)
+<p align="center">
+  <img src="assets/images/outputs/ToDoApp/todoApp.png" width="30%"/>
+  <img src="assets/images/outputs/ToDoApp/deleteButton.png" width="30%"/>
+  <img src="assets/images/outputs/ToDoApp/TodoAdd.png" width="30%"/>
+</p>
 
 ---
 
