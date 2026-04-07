@@ -1,70 +1,10 @@
+import 'package:counting/User_List/models/model_user.dart';
+import 'package:counting/User_List/models/model_user_list.dart';
+import 'package:counting/User_List/pages/user_profile.dart';
 import 'package:flutter/material.dart';
 
 class UserListScreen extends StatelessWidget {
   UserListScreen({super.key});
-
-  final List<Map<String, dynamic>> userInfoJson = [
-    {
-      "userName": "Md. Rakibul Hasan",
-      "userProffession": "Flutter Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Rajibul Islam",
-      "userProffession": "UX Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Shajedul Islam",
-      "userProffession": "UI Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Soykot Rahman",
-      "userProffession": "Flutter Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Nazmul Bhuyan",
-      "userProffession": "Digital Marketer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Shamim Usman",
-      "userProffession": "Software Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Rakibul Hasan",
-      "userProffession": "Flutter Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Rajibul Islam",
-      "userProffession": "UX Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Shajedul Islam",
-      "userProffession": "UI Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Soykot Rahman",
-      "userProffession": "Flutter Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Nazmul Bhuyan",
-      "userProffession": "Digital Marketer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    },
-    {
-      "userName": "Md. Shamim Usman",
-      "userProffession": "Software Developer",
-      "userProfileImage": "assets/images/rakib.jpeg"
-    }
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -106,11 +46,6 @@ class UserListScreen extends StatelessWidget {
                         hoverColor: Colors.orange,
                         iconColor: Colors.black,
                         selectedTileColor: Colors.deepOrangeAccent,
-                        onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content:
-                                  Text(" ${user.userName} Clicked by someone")));
-                        },
                         leading: CircleAvatar(
                           radius: 25,
                           backgroundColor: Colors.greenAccent,
@@ -127,6 +62,13 @@ class UserListScreen extends StatelessWidget {
                         ),
                         trailing: IconButton(
                             onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => userProfile(
+                                      name: user.userName,
+                                      subTitle: user.userProffession,
+                                      imagePath: user.userProfileImage,
+                                      contact: user.userContact,
+                                      jobDescription: user.professionDescription,)));
                               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                                   content: Text(
                                       "${user.userName} Traling Icon is Clicked")));
@@ -157,22 +99,3 @@ class UserListScreen extends StatelessWidget {
   }
 }
 
-//Model Class of User
-class User {
-  final String userName;
-  final String userProffession;
-  final String userProfileImage;
-
-  User(
-      {required this.userName,
-      required this.userProffession,
-      required this.userProfileImage});
-
-  //Json File ke User object e convert;
-  factory User.fromJson(Map<String, dynamic> json) {
-    return User(
-        userName: json["userName"],
-        userProffession: json["userProffession"],
-        userProfileImage: json["userProfileImage"]);
-  }
-}

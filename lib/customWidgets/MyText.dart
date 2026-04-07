@@ -15,9 +15,10 @@ class MyText extends StatelessWidget {
 
   // TitleText
   factory MyText.titleText(String text,
-      {Color textcolor = Colors.black87,
-      double size = 28,
-      FontWeight fontWeightValue = FontWeight.bold}) {
+      {
+        Color textcolor = Colors.black87,
+        double size = 28,
+        FontWeight fontWeightValue = FontWeight.bold}) {
     return MyText(
       text: text,
       style: TextStyle(
@@ -31,12 +32,15 @@ class MyText extends StatelessWidget {
 
   // SectionTitleText
   factory MyText.sectionText(String text,
-      {Color textColor = Colors.black87, double size = 20}) {
+      {
+        Color textColor = Colors.black87,
+        double size = 20,
+        FontWeight fontWeightValue = FontWeight.bold}) {
     return MyText(
       text: text,
       style: TextStyle(
         fontSize: size,
-        fontWeight: FontWeight.w600,
+        fontWeight: fontWeightValue,
         color: textColor,
       ),
     );
