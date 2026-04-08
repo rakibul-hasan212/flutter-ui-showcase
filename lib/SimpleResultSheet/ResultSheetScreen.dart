@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../customWidgets/MyText.dart';
 import 'custom_widgets.dart';
 
 class ResultSheetScreen extends StatefulWidget {
@@ -9,11 +10,11 @@ class ResultSheetScreen extends StatefulWidget {
 }
 
 class _ResultSheetState extends State<ResultSheetScreen> {
-  final formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController subjectNameController = TextEditingController();
   final TextEditingController scoreController = TextEditingController();
 
-   String rslt = " " ;
+  String rslt = " " ;
 
   void ResultCalculate(){
     if(formKey.currentState!.validate()){
@@ -42,10 +43,9 @@ class _ResultSheetState extends State<ResultSheetScreen> {
         grade = "Fail";
       }
       setState(() {
-        rslt = "$grade";
+        rslt = grade;
       });
     }
-
   }
 
   @override
@@ -53,6 +53,7 @@ class _ResultSheetState extends State<ResultSheetScreen> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.green[100],
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: Colors.blue,
           centerTitle: true,
@@ -82,89 +83,72 @@ class _ResultSheetState extends State<ResultSheetScreen> {
 
         body: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Result Sheet",
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w800
-                )),
-              SizedBox(height: 40,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                      "Subject Name:",
-                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400),),
-                  SizedBox(width: 10,),
-                  Expanded(
-                    child: TextFormField(
-                      controller: subjectNameController,
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                          //hintText: "Enter your Subject Name here",
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(16)
-                          ),
-                        hintStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.w400),
-                      ),
-                      validator: (value) =>
-                        value!.isEmpty ? "Enter your subject name" : null
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MyText.titleText("Result Sheet"),
+                SizedBox(height: 30,),
+                Form(
+                  key: formKey,
+                   child: Column(
+                     children: [
+                       TextFormField(
+                           controller: subjectNameController,
+                           keyboardType: TextInputType.text,
+                           decoration: InputDecoration(
+                             label: MyText.sectionText("Subject Name"),
+                             hintText: "Enter your Subject Name here",
+                             border: OutlineInputBorder(
+                                 borderRadius: BorderRadius.circular(16)
+                             ),
+                             hintStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.w400),
+                           ),
+                           validator: (value) =>
+                           value!.isEmpty ? "Subject Name is required" : null
+                       ),
+                       SizedBox(height: 20,),
+                       TextFormField(
+                           controller: scoreController,
+                           keyboardType: TextInputType.number,
+                           decoration: InputDecoration(
+                             label: MyText.sectionText("Obtain Score"),
+                             hintText: "Enter your Score here",
+                             border: OutlineInputBorder(
+                                 borderRadius: BorderRadius.circular(16)
+                             ),
+                             hintStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.w400),
+                           ),
+                           validator: (value) =>
+                           value!.isEmpty ? "Score is required": null
+                       )
+                     ],
+                   ),
+                ),
 
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    "Obtained Score:",
-                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400),),
-                  SizedBox(width: 10,),
-                  Expanded(
-                    child: TextFormField(
-                      controller: scoreController,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        //hintText: "Enter your Score here",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(16)
-                        ),
-                        hintStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.w400),
-                      ),
-                      validator: (value) =>
-                      value!.isEmpty ? "Enter your Score" : null
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(height: 20,),
-              ElevatedButton(
-                  onPressed: (){
-                      ResultCalculate();
-                      //print("$rslt");
-                  }, 
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Text(
-                      "GPA",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.redAccent,
-                        //backgroundColor: Colors.lime[200]
-                      )
-                    ),
-                  )),
-              SizedBox(height: 20,),
-              Text("Generate Result"),
-              SizedBox(height: 20,),
-              //Text(rslt)
+                SizedBox(height: 20,),
+                ElevatedButton(
+                    onPressed: (){
+                        ResultCalculate();
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: MyText.buttonText("GPA",size: 18,fontWeightValue: FontWeight.w700,textColor: Colors.red.shade300)
+                    )),
+                SizedBox(height: 20,),
+                MyText.sectionText("Generate Result"),
+                SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyText.captionText("You Obtain in" + " ${subjectNameController.text} => ",size: 24,textColor: Colors.red.shade300),
+                    MyText.captionText(rslt,size: 24,textColor: Colors.red.shade600)
+                  ],
+                )
 
-            ],
+
+              ],
+            ),
           ),
         ) ,
         bottomNavigationBar: NavigationButton(),
