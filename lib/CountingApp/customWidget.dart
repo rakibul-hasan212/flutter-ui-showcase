@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 Widget NavigationButton() {
-  bottomNavigationBar:
+  //bottomNavigationBar:
   return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       iconSize: 30,
