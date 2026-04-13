@@ -78,7 +78,7 @@ This project uses Flutter’s **ListView widget** to render a list of contact it
 ```bash id="k2p9zn"
 lib/
 └── ContactInfo/
-    └── contactinfo_using_listViewWidget.dart
+    └── initialpage.dart
 ```
 
 ---
