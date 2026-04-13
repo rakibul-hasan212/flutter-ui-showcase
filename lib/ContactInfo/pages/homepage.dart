@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:counting/ContactInfo/pages/details_page.dart';
+import 'package:counting/ContactInfo/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../model/userinfo_model.dart';
@@ -15,31 +16,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<UserInfoModel> posts  = [];
 
-  //API calling start
-  fetchData() async {
-    final url = Uri.parse("https://jsonplaceholder.typicode.com/users");
-    final response = await http.get(url);
-    if(response.statusCode==200){
-      final jsonData = jsonDecode(response.body);
-      final jsonList = jsonData as List;
-
-      setState(() {
-        for(var data in jsonList){
-          posts.add(UserInfoModel.fromJson(data));
-        }
-      });
-      //print(posts[0].id);
-    }
-    else{
-      print("Error");
-    }
-  }
-  //API calling End
   @override
   void initState() {
+    fetchInfo();
     super.initState();
-    fetchData();
   }
+  //API calling start
+  Future fetchInfo() async {
+    final fetchData = await ApiService().fetchData();
+    setState(() {
+      posts = fetchData;
+    });
+  }
+  //API calling End
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
