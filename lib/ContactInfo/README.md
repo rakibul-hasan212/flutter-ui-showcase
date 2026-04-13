@@ -23,6 +23,7 @@ It showcases how multiple contact items can be displayed in a scrollable list fo
 * Display structured data (contact info) in UI
 * Build clean and reusable UI components
 * Understand scrolling layouts
+* API call for Fetch the Data from the 3rd party Server
 
 ---
 
@@ -33,6 +34,8 @@ It showcases how multiple contact items can be displayed in a scrollable list fo
 * 👤 Contact info (name, phone, etc.) display
 * 🎨 Clean and simple UI layout
 * ♻️ Reusable widget structure
+* Perform the GET request
+* Make different Model for improve readability
 
 ---
 
