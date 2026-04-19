@@ -25,6 +25,10 @@ It is ideal for beginners and intermediate developers who want to learn how to b
 * Learn layout structuring and widget composition
 * Build reusable UI components
 * Improve design sense and responsiveness
+* Using State Management to handling the data changes
+* API Integration
+* Responsive Layout
+  
 
 ---
 
@@ -59,9 +63,10 @@ This project is mainly focused on **UI design**, not backend logic.
 
 👉 Basically:
 
-* No API
-* No database
-* Only UI rendering
+* Using State Management for Data handling
+* API Integration 
+* No database use yet
+* Not Only UI rendering try to more dynamic design day by day
 
 ---
 
@@ -120,6 +125,17 @@ flutter run
   <img src="assets/images/outputs/profileUI/DrawerOutputs.png" width="23%"/>
 </p>
 
+
+---
+
+
+
+### 📱 Note Book Apps(You can add notes)  
+
+<p align="center">
+  <img src="assets/images/outputs/NoteBook/note_addNotes.png" width="45%"/>
+  <img src="assets/images/outputs/NoteBook/list_note.png" width="45%"/>
+</p>
 
 ---
 
