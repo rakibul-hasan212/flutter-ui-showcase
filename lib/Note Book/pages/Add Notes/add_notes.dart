@@ -28,6 +28,7 @@ class _AddNotesPageState extends State<AddNotesPage> {
           child: Form(
             key: _formkey,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextFormField(
                   controller: title,
