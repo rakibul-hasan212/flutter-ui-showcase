@@ -1,5 +1,7 @@
+import 'package:counting/CountingApp/Get%20Controller/counter_controller.dart';
 import 'package:flutter/material.dart';
 import 'customWidget.dart';
+import 'package:get/get.dart';
 
 class CountingScreen extends StatefulWidget {
   const CountingScreen({super.key});
@@ -9,25 +11,7 @@ class CountingScreen extends StatefulWidget {
 }
 
 class _CountingState extends State<CountingScreen> {
-  int count = 0;
-
-  void Increment() {
-    setState(() {
-      count++;
-    });
-  }
-
-  void Decrement() {
-    setState(() {
-      count--;
-    });
-  }
-  void Clear(){
-    setState(() {
-      count = 0;
-    });
-  }
-
+  CounterController controller = Get.put(CounterController());
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -78,14 +62,16 @@ class _CountingState extends State<CountingScreen> {
                 SizedBox(
                   height: 10,
                 ),
-                Text("Show the Counting Result: ${count.toString()}",
-                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20,color: Colors.red[300])),
+                Obx((){
+                  return Text("Show the Counting Result: ${controller.count.toString()}",
+                      style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20,color: Colors.red[300]));
+                }),
                 SizedBox(
                   height: 10,
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      Increment();
+                      controller.Increment();
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -99,7 +85,7 @@ class _CountingState extends State<CountingScreen> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      Decrement();
+                      controller.Decrement();
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -113,7 +99,7 @@ class _CountingState extends State<CountingScreen> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      Clear();
+                      controller.Clear();
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
