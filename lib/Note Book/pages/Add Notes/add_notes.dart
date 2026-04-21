@@ -16,15 +16,17 @@ class _AddNotesPageState extends State<AddNotesPage> {
   GlobalKey<FormState> _formkey = GlobalKey();
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           title: Text("Add Notes"),
           centerTitle: true,
-          toolbarHeight: MediaQuery.of(context).size.height * .09,
+          toolbarHeight: screenHeight * .09,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(screenWidth * 0.04),
           child: Form(
             key: _formkey,
             child: Column(
@@ -40,7 +42,7 @@ class _AddNotesPageState extends State<AddNotesPage> {
                     focusColor: Colors.green,
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.04,),
+                SizedBox(height: screenHeight * 0.04,),
                 TextFormField(
                   controller: descrp,
                   maxLines: 4,
@@ -52,7 +54,7 @@ class _AddNotesPageState extends State<AddNotesPage> {
                     focusColor: Colors.green,
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.04,),
+                SizedBox(height: screenHeight * 0.04,),
                 Consumer<NoteProvider>(
                   builder: (context,provider,child) {
                     return ElevatedButton(

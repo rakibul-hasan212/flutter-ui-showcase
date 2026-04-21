@@ -40,33 +40,50 @@ class _landPageState extends State<landPage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.blue.withOpacity(0.4),
         title: Text("Note Item"),
         centerTitle: true,
-        toolbarHeight: MediaQuery.of(context).size.height * 0.09,
+        toolbarHeight: screenHeight * 0.09,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(currentTime),
-          Consumer<NoteProvider>(
-              builder: (context,provider, child) {
-                return Expanded(
-                  child: ListView(
-                    children: [
-                      for(NoteModel noteItem in provider.notes)
-                        ListTile(
-                          title: Text(noteItem.title,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 28),),
-                          subtitle: Text(noteItem.description,style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18)),
-                        )
-                    ],
-                  ),
-                );
-              }
-          ),
-        ],
+      body: Padding(
+        padding: EdgeInsets.all(screenWidth * 0.04),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(currentTime),
+            Consumer<NoteProvider>(
+                builder: (context,provider, child) {
+                  return Expanded(
+                    child: ListView(
+                      children: [
+                        for(NoteModel noteItem in provider.notes)
+                          Card(
+                            child: ListTile(
+                              title: Text(noteItem.title,style: TextStyle(fontWeight: FontWeight.bold,fontSize: screenWidth * 0.035),),
+                              subtitle: Text(noteItem.description,style: TextStyle(fontWeight: FontWeight.w600,fontSize: screenWidth * 0.02)),
+                              trailing: IconButton(
+                                  onPressed: (){
+                                    provider.setFavourite(noteItem);
+                                  },
+                                  icon: Icon(
+                                      noteItem.isFavourite ? Icons.favorite : Icons.favorite_border_outlined,
+                                      color: noteItem.isFavourite ? Colors.red : Colors.grey)
+                              ),
+                            ),
+                          )
+                      ],
+                    ),
+                  );
+                }
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: (){

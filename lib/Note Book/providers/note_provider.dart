@@ -3,8 +3,17 @@ import 'package:flutter/material.dart';
 
 class NoteProvider extends ChangeNotifier{
   List<NoteModel> notes = [];
+
   void addNotes(NoteModel note){
     notes.add(note);
     notifyListeners();
   }
+
+  void setFavourite(NoteModel note){
+    note.isFavourite = !note.isFavourite;
+    notifyListeners();
+  }
+
+
+
 }
