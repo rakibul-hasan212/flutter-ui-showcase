@@ -35,10 +35,18 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  http:
-  provider: ^6.1.5+1
-  get: ^4.7.3
-  intl: ^0.18.0
+  http: 1.6.0               #it's a http package for making http requests
+  provider: ^6.1.5+1          #it's a provider package for state management
+  get: ^4.7.3                 #it's a get package for navigation and state management(alternative to provider it called getx)
+  intl: ^0.18.0               #it's a intl package for date formatting and localization
+  fluttertoast: ^8.0.9        #it's a fluttertoast package for showing toast messages
+  shared_preferences: ^2.0.15 #it's a shared_preferences package for storing data locally
+  image_picker: ^0.8.7+4      #it's a image_picker package for picking images from gallery or camera
+  path_provider: ^2.0.14      #it's a path_provider package for getting the path of the device storage
+  sqflite: ^2.0.3+1           #it's a sqflite package for storing data in a local database
+
+
+
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +73,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/images/signup.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

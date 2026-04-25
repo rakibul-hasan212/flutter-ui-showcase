@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'LogInPage.dart';
+import '../login/LogInPage.dart';
 
 class SignUpPage extends StatelessWidget {
   SignUpPage({super.key});
@@ -24,7 +24,7 @@ class SignUpPage extends StatelessWidget {
               Container(
                 child: CircleAvatar(
                   radius: 80,
-                  backgroundImage: AssetImage("assets/images/rakib.jpeg"),
+                  backgroundImage: AssetImage("assets/images/signup.png"),
                   onBackgroundImageError: (exception, stackTrace){} ,
                 ),
               ),

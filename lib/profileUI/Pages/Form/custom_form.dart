@@ -1,57 +1,16 @@
-
+import 'package:counting/ContactInfo/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
-import 'HomePage.dart';
-import 'SignUpPage.dart';
-
-
-
-class LogInPage extends StatelessWidget{
-   LogInPage({super.key});
-
-  bool ischecked = false;
+class CustomForm extends StatelessWidget {
+   bool ischecked = false;
+    CustomForm({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      //backgroundColor: Colors.lime[200],
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 120.0,left: 10,right: 10),
-            child: Container(
-              width: double.maxFinite,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: CircleAvatar(
-                      radius: 80,
-                      //backgroundColor: Colors.blue,
-                      backgroundImage: AssetImage("assets/images/flutter_icon.png"),
-                    ),
-
-                    //child: Image.asset("assets/images/flutter_icon.png"),
-                  ),
-                  Text(
-                    "Welcome to Our Platform!!",
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 10,),
-                  Text(
-                    "You can login to the platform through \nyour registered Email and Password",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.grey
-                    ),
-                  ),
-                  SizedBox(height: 30,),
-                  TextField(
+    return Form( 
+                child: Column(
+                    children: [
+                      TextField(
                     controller: TextEditingController(),
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
@@ -116,42 +75,8 @@ class LogInPage extends StatelessWidget{
                           child: Text("Log in",style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w800,fontSize: 20),)),
                      ),
                    ),
-                  SizedBox(height:5,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Don't have any account?",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 16)
-                      ),
-                      // SizedBox(width:3,),
-                      TextButton(onPressed: (){
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Reach the Sign up page successfully")));
-                        Navigator.push(
-                            context, MaterialPageRoute(
-                            builder: (context) => SignUpPage()));
-                      },
-                          child: Text("Sign Up",
-                              style: TextStyle(
-                                  color: Colors.blue,
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 18)))
                     ],
                   )
-
-                ],
-
-              ),
-            ),
-          ),
-        ),
-      ),
-
-    );
+                  );
   }
-
-
-
 }

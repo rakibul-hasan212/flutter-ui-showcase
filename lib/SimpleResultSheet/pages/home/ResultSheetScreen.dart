@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import '../customWidgets/MyText.dart';
-import 'custom_widgets.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../../../customWidgets/MyText.dart';
+import '../../widgets/custom_widgets.dart';
+import '../login_page/login_page.dart';
+import '../splash_page/splash_page.dart';
 
 class ResultSheetScreen extends StatefulWidget {
   const ResultSheetScreen({super.key});
@@ -144,8 +147,18 @@ class _ResultSheetState extends State<ResultSheetScreen> {
                     MyText.captionText("You Obtain in" + " ${subjectNameController.text} => ",size: 24,textColor: Colors.red.shade300),
                     MyText.captionText(rslt,size: 24,textColor: Colors.red.shade600)
                   ],
-                )
+                ),
+                SizedBox(height: 20,),
 
+                ///perform the logic later
+                ElevatedButton(
+                    onPressed: () async{
+                      var pref = await SharedPreferences.getInstance();
+                      pref.setBool(SplashPageState.KEYLOGIN, false);
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginPage()));
+                    },
+                    child: MyText.buttonText("Log Out",size: 18,fontWeightValue: FontWeight.w700,textColor: Colors.red.shade300)
+                )
 
               ],
             ),
