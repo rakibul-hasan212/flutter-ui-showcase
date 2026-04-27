@@ -43,7 +43,8 @@ dependencies:
   shared_preferences: ^2.0.15 #it's a shared_preferences package for storing data locally
   image_picker: ^0.8.7+4      #it's a image_picker package for picking images from gallery or camera
   path_provider: ^2.0.14      #it's a path_provider package for getting the path of the device storage
-  sqflite: ^2.0.3+1           #it's a sqflite package for storing data in a local database
+  #sqflite: ^2.0.3+1           #it's a sqflite package for storing data in a local database
+  firebase_core: ^4.7.0
 
 
 
