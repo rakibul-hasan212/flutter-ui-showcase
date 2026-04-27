@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:counting/Note%20Book/models/noteModel.dart';
 import 'package:counting/Note%20Book/providers/note_provider.dart';
 import 'package:flutter/material.dart';
@@ -11,9 +12,12 @@ class AddNotesPage extends StatefulWidget{
 }
 
 class _AddNotesPageState extends State<AddNotesPage> {
+  
   TextEditingController title = TextEditingController();
   TextEditingController descrp = TextEditingController();
   GlobalKey<FormState> _formkey = GlobalKey();
+  // final dbRef = FirebaseFirestore.instance.collection("Notes");
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -58,9 +62,21 @@ class _AddNotesPageState extends State<AddNotesPage> {
                 Consumer<NoteProvider>(
                   builder: (context,provider,child) {
                     return ElevatedButton(
-                        onPressed: (){
+                        onPressed: () async{
                           if(_formkey.currentState!.validate()){
-                            provider.addNotes(NoteModel(title: title.text, description: descrp.text));
+                            //for adding data to firebase
+                            // String id = DateTime.now().millisecondsSinceEpoch.toString();
+                            // await dbRef.doc(id).set({
+                            //   'id': id,
+                            //   'title': title.text,
+                            //   'description': descrp.text,
+                            // });
+                            await provider.addFirebaseNote(NoteModel(title: title.text, description: descrp.text));
+
+                            //for adding data to modelNotes using provider
+                             provider.addNotes(NoteModel(title: title.text, description: descrp.text));
+
+                            //after adding data poping the page
                             Navigator.pop(context);
                           }
                         },
